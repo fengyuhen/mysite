@@ -1,0 +1,440 @@
+{#<!DOCTYPE html>#}
+{% load static %}
+<html xmlns:https="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="{% static "css/fontastic.css" %}">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="{% static "css/grasp_mobile_progress_circle-1.0.0.min.css" %}">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="{% static "vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" %}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{% static "css/style.default.css" %}" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+            <!-- User Info-->
+            <div class="sidenav-header-inner text-center"><img src="{% static "img/avatar-7.jpg" %}" alt="person"
+                                                               class="img-fluid rounded-circle">
+                <h2 class="h5">陈曦</h2><span>开发者</span>
+            </div>
+            <!-- Small Brand information, appears on minimized sidebar-->
+            <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center">
+                <strong>B</strong><strong class="text-primary">D</strong></a></div>
+        </div>
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+            <h5 class="sidenav-heading">主模块</h5>
+            <ul id="side-main-menu" class="side-menu list-unstyled">
+                <li><a href="index.html"> <i class="icon-home"></i>销售管理 </a></li>
+                {#                <li><a href="forms.html"> <i class="icon-form"></i>表单 </a></li>#}
+                {#                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>图表 </a></li>#}
+                {#                <li><a href="tables.html"> <i class="icon-grid"></i>表格 </a></li>#}
+                {#            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>#}
+                {#              <ul id="exampledropdownDropdown" class="collapse list-unstyled ">#}
+                {#                <li><a href="#">Page</a></li>#}
+                {#                <li><a href="#">Page</a></li>#}
+                {#                <li><a href="#">Page</a></li>#}
+                {#              </ul>#}
+                {#            </li>#}
+                {#            <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page                             </a></li>#}
+                <li><a href="page_1.html"> <i class="icon-interface-windows"></i>采购管理 </a></li>
+                <li><a href="page_2.html"> <i class="icon-interface-windows"></i>库存管理 </a></li>
+                <li><a href="page_3.html"> <i class="icon-interface-windows"></i>会员管理 </a></li>
+                <li><a href="login.html"> <i class="icon-interface-windows"></i>退货管理 </a></li>
+                <li><a href="login.html"> <i class="icon-interface-windows"></i>供应商管理 </a></li>
+                {#            <li> <a href="#"> <i class="icon-mail"></i>Demo#}
+                {#                <div class="badge badge-warning">6 New</div></a></li>#}
+            </ul>
+        </div>
+        <div class="admin-menu">
+            <h5 class="sidenav-heading">子模块</h5>
+            <ul id="side-admin-menu" class="side-menu list-unstyled">
+                <li><a href="#"> <i class="icon-screen"> </i>销售额</a></li>
+                <li><a href="#"> <i class="icon-flask"> </i>分品类利润饼图
+                    <div class="badge badge-info">Special</div>
+                </a></li>
+                <li><a href=""> <i class="icon-flask"> </i>成本利润趋势图</a></li>
+                <li><a href=""> <i class="icon-picture"> </i>月销售利润达标率</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="page">
+    <!-- navbar-->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i
+                            class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+                        <div class="brand-text d-none d-md-inline-block"><span>  </span><strong class="text-primary">库存管理</strong>
+                        </div>
+                    </a></div>
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <!-- Notifications dropdown-->
+                        <li class="nav-item dropdown"><a id="notifications" rel="nofollow" data-target="#" href="#"
+                                                         data-toggle="dropdown" aria-haspopup="true"
+                                                         aria-expanded="false" class="nav-link"><i
+                                class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                            <ul aria-labelledby="notifications" class="dropdown-menu">
+                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification d-flex justify-content-between">
+                                        <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new
+                                            messages
+                                        </div>
+                                        <div class="notification-time"><small>4 minutes ago</small></div>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification d-flex justify-content-between">
+                                        <div class="notification-content"><i class="fa fa-twitter"></i>You have 2
+                                            followers
+                                        </div>
+                                        <div class="notification-time"><small>4 minutes ago</small></div>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification d-flex justify-content-between">
+                                        <div class="notification-content"><i class="fa fa-upload"></i>Server Rebooted
+                                        </div>
+                                        <div class="notification-time"><small>4 minutes ago</small></div>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                    <div class="notification d-flex justify-content-between">
+                                        <div class="notification-content"><i class="fa fa-twitter"></i>You have 2
+                                            followers
+                                        </div>
+                                        <div class="notification-time"><small>10 minutes ago</small></div>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                                    <strong> <i class="fa fa-bell"></i>view all notifications </strong></a></li>
+                            </ul>
+                        </li>
+                        <!-- Messages dropdown-->
+                        <li class="nav-item dropdown"><a id="messages" rel="nofollow" data-target="#" href="#"
+                                                         data-toggle="dropdown" aria-haspopup="true"
+                                                         aria-expanded="false" class="nav-link"><i
+                                class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
+                            <ul aria-labelledby="notifications" class="dropdown-menu">
+                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                    <div class="msg-profile"><img src="{% static "img/avatar-1.jpg" %}" alt="..."
+                                                                  class="img-fluid rounded-circle"></div>
+                                    <div class="msg-body">
+                                        <h3 class="h5">Jason Doe</h3><span>sent you a direct message</span><small>3 days
+                                        ago at 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                    <div class="msg-profile"><img src="{% static "img/avatar-2.jpg" %}" alt="..."
+                                                                  class="img-fluid rounded-circle"></div>
+                                    <div class="msg-body">
+                                        <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3
+                                        days ago at 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                    <div class="msg-profile"><img src="{% static "img/avatar-3.jpg" %}" alt="..."
+                                                                  class="img-fluid rounded-circle"></div>
+                                    <div class="msg-body">
+                                        <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3
+                                        days ago at 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </a></li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                                    <strong> <i class="fa fa-envelope"></i>Read all messages </strong></a></li>
+                            </ul>
+                        </li>
+                        <!-- Languages dropdown    -->
+                        <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#"
+                                                         data-toggle="dropdown" aria-haspopup="true"
+                                                         aria-expanded="false"
+                                                         class="nav-link language dropdown-toggle"><img
+                                src="{% static "img/flags/16/CN.png" %}" alt="Chinese"><span
+                                class="d-none d-sm-inline-block">中文</span></a>
+                            <ul aria-labelledby="languages" class="dropdown-menu">
+                                <li><a rel="nofollow" href="#" class="dropdown-item"> <img
+                                        src="{% static "img/flags/16/FR.png" %}" alt="English"
+                                        class="mr-2"><span>French                                                         </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Log out-->
+                        <li class="nav-item"><a href="login.html" class="nav-link logout"> <span
+                                class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Counts Section -->
+    <section class="dashboard-counts section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Count item widget-->
+                <div class="col-xl-2 col-md-4 col-6">
+                    <div class="wrapper count-title d-flex">
+                        <div class="icon"><i class="icon-user"></i></div>
+                        <div class="name"><strong class="text-uppercase">库存总价值</strong><span>今日</span>
+                            <div class="count-number">￥13,428.1</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Count item widget-->
+                <div class="col-xl-2 col-md-4 col-6">
+                    <div class="wrapper count-title d-flex">
+                        <div class="icon"><i class="icon-padnote"></i></div>
+                        <div class="name"><strong class="text-uppercase">库存价值环比</strong><span>环比昨日</span>
+                            <div class="count-number">+18.8%</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Count item widget-->
+                <div class="col-xl-2 col-md-4 col-6">
+                    <div class="wrapper count-title d-flex">
+                        <div class="icon"><i class="icon-check"></i></div>
+                        <div class="name"><strong class="text-uppercase">今日入库金额</strong><span>今日</span>
+                            <div class="count-number">￥5,677.4</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Count item widget-->
+                <div class="col-xl-2 col-md-4 col-6">
+                    <div class="wrapper count-title d-flex">
+                        <div class="icon"><i class="icon-bill"></i></div>
+                        <div class="name"><strong class="text-uppercase">今日入库金额环比</strong><span>环比昨日</span>
+                            <div class="count-number">+13.4%</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Count item widget-->
+                <div class="col-xl-2 col-md-4 col-6">
+                    <div class="wrapper count-title d-flex">
+                        <div class="icon"><i class="icon-list"></i></div>
+                        <div class="name"><strong class="text-uppercase">今日出库金额</strong><span>月度</span>
+                            <div class="count-number">￥28,900.3</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Count item widget-->
+                <div class="col-xl-2 col-md-4 col-6">
+                    <div class="wrapper count-title d-flex">
+                        <div class="icon"><i class="icon-list-1"></i></div>
+                        <div class="name"><strong class="text-uppercase">今日出库金额环比</strong><span>月度</span>
+                            <div class="count-number">+20.5%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="tlinks">Collect from <a href="http://www.cssmoban.com/" title="网站模板">Shierly</a></div>
+    <!-- Header Section-->
+    <section class="dashboard-header section-padding">
+        <div class="container-fluid">
+            <div class="row d-flex align-items-md-stretch">
+
+                <!-- Pie Chart-->
+                <div class="col-lg-4 col-md-4">
+                    <div class="card project-progress">
+                        <h2 class="display h4">库存分品类价值分布图</h2>
+                        <p>月度分析</p>
+                        <div class="bar-chart1">
+                            <div id="barChart1" style="width: 100%; height: 450px"></div>
+                            {#                  <canvas class="pieChart" width="250" height="250"> </canvas>#}
+                        </div>
+                    </div>
+                    <div class="card project-progress">
+                        <h2 class="display h4">库存数量分品类分布图</h2>
+                        <p>日度分析</p>
+                        <div class="bar-chart2">
+                            <div id="barChart2" style="width: 100%; height: 450px"></div>
+                            {#                  <canvas class="pieChart" width="250" height="250"> </canvas>#}
+                        </div>
+                    </div>
+                </div>
+                <!-- Pie Chart-->
+                <div class="col-lg-4 col-md-4">
+                    <div class="card project-progress">
+                        <h2 class="display h4">库存金额分品类分布图</h2>
+                        <p>年度分析</p>
+                        <div class="pie-line-chart">
+                            <div id="pieLineChart" style="width: 100%; height: 450px"></div>
+                            {#                  <canvas class="pieChart" width="250" height="250"> </canvas>#}
+                        </div>
+                    </div>
+                    <div class="card project-progress">
+                        <h2 class="display h4">库存价值分品类分布热力图</h2>
+{#                        <p>heatMapChart</p>#}
+                        <div class="bar-chart2">
+                            <div id="heatMapChart" style="width: 100%; height: 450px"></div>
+                            {#                  <canvas class="pieChart" width="250" height="250"> </canvas>#}
+                        </div>
+                    </div>
+                </div>
+                <!-- Line Chart -->
+                <div class="col-lg-4 col-md-4 flex-lg-last flex-md-first align-self-baseline">
+                    <div class="card sales-report">
+                        <h2 class="display h4">成本利润趋势图</h2>
+                        <p> 月度分析</p>
+                        <div>
+                            <div style="width: 100%; height: 700px">
+                                <table class="table table-hover" style="width: 100%">
+                                    <thead>
+                                    <tr>
+                                        <th>商品名称</th>
+                                        <th>库存数量</th>
+                                        <th>目标数量</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可乐</td>
+                                        <td>124</td>
+                                        <td>221</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="width: 100%; height: 200px">
+                                <div class="card user-activity">
+                                    <h2 class="display h4">年度库存进库出库占比</h2>
+{#                                    <div class="number">56.3%</div>#}
+{#                                    <h3 class="h4 display">整体销售额</h3>#}
+                                    <div class="progress">
+                                        <div role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                                             aria-valuemax="100" class="progress-bar progress-bar bg-primary"></div>
+                                    </div>
+                                    <div class="page-statistics d-flex justify-content-between">
+{#                                        <div class="page-statistics-left"><span>新零售货柜销售额</span><strong>￥35216.0</strong>#}
+{#                                        </div>#}
+                                        <div class="page-statistics-right"><span>入库占比</span><strong>14.15%</strong></div>
+                                    </div>
+                                    <div class="progress">
+                                        <div role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0"
+                                             aria-valuemax="100" class="progress-bar progress-bar bg-primary"></div>
+                                    </div>
+                                    <div class="page-statistics d-flex justify-content-between">
+{#                                        <div class="page-statistics-left"><span>新零售货柜销售额</span><strong>￥35216.0</strong>#}
+{#                                        </div>#}
+                                        <div class="page-statistics-right"><span>出库占比</span><strong>29.15%</strong></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Bootstrapious All rights reserved. &copy; 2017-2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- JavaScript files-->
+<script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+<script src="{% static "vendor/popper.js/umd/popper.min.js" %}"></script>
+<script src="{% static "vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+<script src="{% static "js/grasp_mobile_progress_circle-1.0.0.min.js" %}"></script>
+<script src="{% static "vendor/jquery.cookie/jquery.cookie.js" %}"></script>
+<script src="{% static "vendor/chart.js/Chart.min.js" %}"></script>
+<script src="{% static "vendor/echart.js/dist/echarts.js" %}"></script>
+<script src="{% static "vendor/jquery-validation/jquery.validate.min.js" %}"></script>
+<script src="{% static "vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" %}"></script>
+<script src="{% static "js/charts-page-2.js" %}"></script>
+<script src="{% static "js/charts-page-2-heatmap.js" %}"></script>
+<!-- Main File-->
+<script src="{% static "js/front.js" %}"></script>
+</body>
+</html>
