@@ -12,12 +12,16 @@ from django.contrib.auth import login
 # Create your templates here.
 @login_required(login_url='login.html')
 def index(request):
-    context = {}
+    context = {'username': request.user}
     template = loader.get_template('datavisualization/dashboard/index.html')
     return HttpResponse(template.render(context, request))
 
 
 def login_page(request):
+    if request.user.username is not None:
+        context = {}
+        template = loader.get_template('datavisualization/dashboard/index.html')
+        return HttpResponse(template.render(context, request))
     context = {}
     template = loader.get_template('datavisualization/dashboard/login.html')
     return HttpResponse(template.render(context, request))
@@ -25,21 +29,21 @@ def login_page(request):
 
 @login_required(login_url='login.html')
 def page_1(request):
-    context = {}
+    context = {'username': request.user}
     template = loader.get_template('datavisualization/dashboard/page_1.html')
     return HttpResponse(template.render(context, request))
 
 
 @login_required(login_url='login.html')
 def page_2(request):
-    context = {}
+    context = {'username': request.user}
     template = loader.get_template('datavisualization/dashboard/page_2.html')
     return HttpResponse(template.render(context, request))
 
 
 @login_required(login_url='login.html')
 def page_3(request):
-    context = {}
+    context = {'username': request.user}
     template = loader.get_template('datavisualization/dashboard/page_3.html')
     return HttpResponse(template.render(context, request))
 
@@ -63,7 +67,7 @@ def do_login(request):
     return redirect('index.html', context)
 
 
-@login_required(login_url='login.html')
+# @login_required(login_url='login.html')
 def do_logout(request):
     # logout时，使用from django.contrib.auth import logout函数，不能实现用户权限注销的功能，现使用
     # request.session.clear()保证权限的注销
