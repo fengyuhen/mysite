@@ -48,6 +48,20 @@ def page_3(request):
     return HttpResponse(template.render(context, request))
 
 
+@login_required(login_url='login.html')
+def page_4(request):
+    context = {'username': request.user}
+    template = loader.get_template('datavisualization/dashboard/page_4.html')
+    return HttpResponse(template.render(context, request))
+
+
+@login_required(login_url='login.html')
+def page_5(request):
+    context = {'username': request.user}
+    template = loader.get_template('datavisualization/dashboard/page_5.html')
+    return HttpResponse(template.render(context, request))
+
+
 def do_login(request):
     username = request.GET.get('loginUsername')
     password = request.GET.get('loginPassword')
