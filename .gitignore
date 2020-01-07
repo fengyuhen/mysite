@@ -2,3 +2,5 @@
 .idea/
 
 venv/
+
+datavisualization/__pycache__/

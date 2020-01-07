@@ -72,74 +72,6 @@ $(document).ready(function () {
     });
 
 
-    // ------------------------------------------------------- //
-    // Pie Chart
-    // ------------------------------------------------------ //
-    // var PIECHART = $('#pieChart');
-    // var myPieChart = new Chart(PIECHART, {
-    //     type: 'doughnut',
-    //     data: {
-    //         labels: [
-    //             "First",
-    //             "Second",
-    //             "Third"
-    //         ],
-    //         datasets: [
-    //             {
-    //                 data: [300, 50, 100],
-    //                 borderWidth: [1, 1, 1],
-    //                 backgroundColor: [
-    //                     brandPrimary,
-    //                     "rgba(75,192,192,1)",
-    //                     "#FFCE56"
-    //                 ],
-    //                 hoverBackgroundColor: [
-    //                     brandPrimary,
-    //                     "rgba(75,192,192,1)",
-    //                     "#FFCE56"
-    //                 ]
-    //             }]
-    //     }
-    // });
-
-    // ------------------------------------------------------- //
-    // echarts
-    // Gauge Chart
-    // ------------------------------------------------------ //
-    // var gaugeChart = echarts.init(document.getElementById('gaugeChart'));
-    // gaugeChart.setOption({
-    //     series: [
-    //         {
-    //             name: '访问来源',
-    //             type: 'pie',
-    //             radius: '55%',
-    //             data: [
-    //                 {value: 235, name: '视频广告'},
-    //                 {value: 274, name: '联盟广告'},
-    //                 {value: 310, name: '邮件营销'},
-    //                 {value: 335, name: '直接访问'},
-    //                 {value: 400, name: '搜索引擎'}
-    //             ]
-    //         }
-    //     ]
-    // });var gaugeChart = echarts.init(document.getElementById('gaugeChart'));
-    // gaugeChart.setOption({
-    //     series: [
-    //         {
-    //             name: '访问来源',
-    //             type: 'pie',
-    //             radius: '55%',
-    //             data: [
-    //                 {value: 235, name: '视频广告'},
-    //                 {value: 274, name: '联盟广告'},
-    //                 {value: 310, name: '邮件营销'},
-    //                 {value: 335, name: '直接访问'},
-    //                 {value: 400, name: '搜索引擎'}
-    //             ]
-    //         }
-    //     ]
-    // });
-
     // var pieChart = echarts.init(document.getElementsByClassName('pie-chart'));
     let pieChart = echarts.init(document.getElementById('pieChart'));
     let pieChart2 = echarts.init(document.getElementById('pieChart2'));
@@ -193,7 +125,4 @@ $(document).ready(function () {
     pieChart2.setOption(option);
     pieChart3.setOption(option);
     pieChart4.setOption(option);
-
-
-
 });
