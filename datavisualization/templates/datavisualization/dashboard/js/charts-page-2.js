@@ -9,10 +9,10 @@ $(document).ready(function () {
         tooltip: {},
         dataset: {
             source: [
-                ['product', '品类1', '品类2', '品类3', '品类4'],
-                ['库存', 41.1, 30.4, 65.1, 53.3],
-                ['入库', 86.5, 92.1, 85.7, 83.1],
-                ['出库', 24.1, 67.2, 79.5, 86.4]
+                ['product', '日用品', '水果', '零食', '饮料'],
+                ['库存', 4114, 2044, 6518, 5334],
+                ['入库', 8656, 7115, 8573, 8319],
+                ['出库', 2417, 9027, 7958, 8647]
             ]
         },
         xAxis: [
@@ -50,7 +50,7 @@ $(document).ready(function () {
             }
         },
         legend: {
-            data: ['品类1', '品类2', '品类3', '品类4', '品类5']
+            data: ['零食', '其他', '日用品', '水果', '饮料']
         },
         grid: {
             left: '3%',
@@ -67,7 +67,7 @@ $(document).ready(function () {
         },
         series: [
             {
-                name: '品类1',
+                name: '零食',
                 type: 'bar',
                 stack: '总量',
                 label: {
@@ -79,7 +79,7 @@ $(document).ready(function () {
                 data: [320, 302, 301, 334, 390, 330, 320]
             },
             {
-                name: '品类2',
+                name: '其他',
                 type: 'bar',
                 stack: '总量',
                 label: {
@@ -91,7 +91,7 @@ $(document).ready(function () {
                 data: [120, 132, 101, 134, 90, 230, 210]
             },
             {
-                name: '品类3',
+                name: '日用品',
                 type: 'bar',
                 stack: '总量',
                 label: {
@@ -103,7 +103,7 @@ $(document).ready(function () {
                 data: [220, 182, 191, 234, 290, 330, 310]
             },
             {
-                name: '品类4',
+                name: '水果',
                 type: 'bar',
                 stack: '总量',
                 label: {
@@ -115,7 +115,7 @@ $(document).ready(function () {
                 data: [150, 212, 201, 154, 190, 330, 410]
             },
             {
-                name: '品类5',
+                name: '饮料',
                 type: 'bar',
                 stack: '总量',
                 label: {
@@ -140,11 +140,11 @@ $(document).ready(function () {
         },
         dataset: {
             source: [
-                ['product', '2012', '2013', '2014', '2015', '2016', '2017'],
-                ['品类1', 41.1, 30.4, 65.1, 53.3, 83.8, 98.7],
-                ['品类2', 86.5, 92.1, 85.7, 83.1, 73.4, 55.1],
-                ['品类3', 24.1, 67.2, 79.5, 86.4, 65.2, 82.5],
-                ['品类4', 55.2, 67.1, 69.2, 72.4, 53.9, 39.1]
+                ['product', '5月', '6月', '7月', '8月', '9月', '10月'],
+                ['饮料', 411, 304, 890, 560, 630, 980],
+                ['零食', 567, 574, 498, 610, 552, 541],
+                ['日用品', 241, 192, 214, 195, 212, 232],
+                ['水果', 123, 214, 56, 135, 214, 231]
             ]
         },
         xAxis: {type: 'category'},
@@ -192,6 +192,85 @@ $(document).ready(function () {
     });
     pieLineChart.setOption(option_pieLineChart);
 
+    let barChart3 = echarts.init(document.getElementById('barChart3'));
+    let barChart4 = echarts.init(document.getElementById('barChart4'));
 
+    let barChart3Option = {
+        color: ['#98dbaf'],
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['供应商A', '供应商D', '供应商H', '供应商B', '供应商J'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '金额',
+                type: 'bar',
+                barWidth: '60%',
+                data: [7879, 5260, 4335, 2213, 1590]
+            }
+        ]
+    };
 
+    let barChart4Option = {
+        color: ['#98dbaf'],
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['供应商A', '供应商D', '供应商B', '供应商E', '供应商J'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '直接访问',
+                type: 'bar',
+                barWidth: '60%',
+                data: [12078, 7906, 3998, 2679, 980]
+            }
+        ]
+    };
+
+    barChart3.setOption(barChart3Option);
+    barChart4.setOption(barChart4Option);
 });
