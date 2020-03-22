@@ -38,7 +38,7 @@
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
             <!-- User Info-->
-            <div class="sidenav-header-inner text-center"><img src="{% static "img/avatar-7.jpg" %}" alt="person"
+            <div class="sidenav-header-inner text-center"><img src="{% static "img/Shierly.jpg" %}" alt="person"
                                                                class="img-fluid rounded-circle">
                 <h2 class="h5">{{ chenxi }}</h2><span>陈曦 </span>
             </div>
@@ -69,17 +69,6 @@
                 <li><a href="page_5python manage.py runserver.html"> <i class="icon-interface-windows"></i>供应商管理 </a></li>
                 {#            <li> <a href="#"> <i class="icon-mail"></i>Demo#}
                 {#                <div class="badge badge-warning">6 New</div></a></li>#}
-            </ul>
-        </div>
-        <div class="admin-menu">
-            <h5 class="sidenav-heading">子模块</h5>
-            <ul id="side-admin-menu" class="side-menu list-unstyled">
-                <li><a href="#"> <i class="icon-screen"> </i>销售额</a></li>
-                <li><a href="#"> <i class="icon-flask"> </i>分品类利润饼图
-                    <div class="badge badge-info">Special</div>
-                </a></li>
-                <li><a href=""> <i class="icon-flask"> </i>成本利润趋势图</a></li>
-                <li><a href=""> <i class="icon-picture"> </i>月销售利润达标率</a></li>
             </ul>
         </div>
     </div>
@@ -250,58 +239,6 @@
     <section class="dashboard-header section-padding">
         <div class="container-fluid">
             <div class="row d-flex align-items-md-stretch">
-                <!-- To Do List-->
-                {#            <div class="col-lg-3 col-md-6">#}
-                {#              <div class="card to-do">#}
-                {#                <h2 class="display h4">To do List</h2>#}
-                {#                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>#}
-                {#                <ul class="check-lists list-unstyled">#}
-                {#                  <li class="d-flex align-items-center">#}
-                {#                    <input type="checkbox" id="list-1" name="list-1" class="form-control-custom">#}
-                {#                    <label for="list-1">Similique sunt in culpa qui officia</label>#}
-                {#                  </li>#}
-                {#                  <li class="d-flex align-items-center">#}
-                {#                    <input type="checkbox" id="list-2" name="list-2" class="form-control-custom">#}
-                {#                    <label for="list-2">Ed ut perspiciatis unde omnis iste</label>#}
-                {#                  </li>#}
-                {#                  <li class="d-flex align-items-center">#}
-                {#                    <input type="checkbox" id="list-3" name="list-3" class="form-control-custom">#}
-                {#                    <label for="list-3">At vero eos et accusamus et iusto </label>#}
-                {#                  </li>#}
-                {#                  <li class="d-flex align-items-center">#}
-                {#                    <input type="checkbox" id="list-4" name="list-4" class="form-control-custom">#}
-                {#                    <label for="list-4">Explicabo Nemo ipsam voluptatem</label>#}
-                {#                  </li>#}
-                {#                  <li class="d-flex align-items-center">#}
-                {#                    <input type="checkbox" id="list-5" name="list-5" class="form-control-custom">#}
-                {#                    <label for="list-5">Similique sunt in culpa qui officia</label>#}
-                {#                  </li>#}
-                {#                  <li class="d-flex align-items-center">#}
-                {#                    <input type="checkbox" id="list-6" name="list-6" class="form-control-custom">#}
-                {#                    <label for="list-6">At vero eos et accusamus et iusto </label>#}
-                {#                  </li>#}
-                {#                  <li class="d-flex align-items-center">#}
-                {#                    <input type="checkbox" id="list-7" name="list-7" class="form-control-custom">#}
-                {#                    <label for="list-7">Similique sunt in culpa qui officia</label>#}
-                {#                  </li>#}
-                {#                  <li class="d-flex align-items-center">#}
-                {#                    <input type="checkbox" id="list-8" name="list-8" class="form-control-custom">#}
-                {#                    <label for="list-8">Ed ut perspiciatis unde omnis iste</label>#}
-                {#                  </li>#}
-                {#                </ul>#}
-                {#              </div>#}
-                {#            </div>#}
-                <!-- Gauge Chart-->
-                {#            <div class="col-lg-3 col-md-6">#}
-                {#              <div class="card project-progress">#}
-                {#                <h2 class="display h4">仪表盘</h2>#}
-                {#                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>#}
-                {#                <div class="gauge-chart">#}
-                {#                  <canvas id="pieChart" width="300" height="300"> </canvas>#}
-                {#                </div>#}
-                {#              </div>#}
-                {#            </div>#}
-                <!-- Pie Chart-->
                 <div class="col-lg-3 col-md-6">
                     <div class="card project-progress">
                         <h2 class="display h4">视觉识别货柜分品类利润分布图</h2>
@@ -344,8 +281,8 @@
                     <div class="card sales-report">
                         <h2 class="display h4">销售成本利润趋势图</h2>
                         <p> 月度分析</p>
-                        <div class="line-chart">
-                            <canvas id="lineChart"></canvas>
+                        <div id="line-chart" style="width: 1200px; height: 650px">
+{#                            <canvas id="lineChart"></canvas>#}
                         </div>
                     </div>
                 </div>
@@ -360,7 +297,7 @@
                     <!-- Income-->
                     <div class="card income text-center">
                         <div class="icon"><i class="icon-line-chart"></i></div>
-                        <div class="number">68人</div>
+                        <div class="number">352人</div>
                         <strong class="text-primary">客流量</strong>
                         <p>了解客流动态</p>
                     </div>
@@ -369,7 +306,7 @@
                     <!-- Income-->
                     <div class="card income text-center">
                         <div class="icon"><i class="icon-line-chart"></i></div>
-                        <div class="number">￥203.6</div>
+                        <div class="number">￥12.1</div>
                         <strong class="text-primary">日客均消费金额</strong>
                         <p>评估消费水平</p>
                     </div>
@@ -384,7 +321,7 @@
                                      class="d-flex align-items-center justify-content-center"></div>
                             </div>
                             <div class="col-sm-6"><strong
-                                    class="text-primary">￥31604.50</strong><small>截止本月</small><span>距离目标利润额</span></div>
+                                    class="text-primary">￥2805</strong><small>截止本月</small><span>距离目标利润额</span></div>
                         </div>
                         <p>年度目标进度，把握经营节奏</p>
                     </div>
@@ -393,34 +330,21 @@
                     <!-- User Actibity-->
                     <div class="card user-activity">
                         <h2 class="display h4">年度商品累计销售额</h2>
-                        <div class="number">￥248720.60</div>
+                        <div class="number">￥45961.80</div>
                         <h3 class="h4 display">整体销售额</h3>
                         <div class="progress">
-                            <div role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                            <div role="progressbar" style="width: 38.6%" aria-valuenow="25" aria-valuemin="0"
                                  aria-valuemax="100" class="progress-bar progress-bar bg-primary"></div>
                         </div>
                         <div class="page-statistics d-flex justify-content-between">
-                            <div class="page-statistics-left"><span>新零售货柜销售额</span><strong>￥35216.0</strong></div>
-                            <div class="page-statistics-right"><span>占比</span><strong>14.15%</strong></div>
+                            <div class="page-statistics-left"><span>新零售货柜销售额</span><strong>17740.95</strong></div>
+                            <div class="page-statistics-right"><span>占比</span><strong>38.6%</strong></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="main-footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <p>Bootstrapious All rights reserved. &copy; 2017-2019</p>
-                </div>
-                {#            <div class="col-sm-6 text-right">#}
-                {#              More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>#}
-                {#              #}
-                {#            </div>#}
-            </div>
-        </div>
-    </footer>
 </div>
 <!-- JavaScript files-->
 <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>

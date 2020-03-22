@@ -4,3 +4,5 @@
 venv/
 
 datavisualization/__pycache__/
+
+datavisualization/templates/datavisualization/dashboard/img/Shierly.jpg
