@@ -40,7 +40,7 @@
             <!-- User Info-->
             <div class="sidenav-header-inner text-center"><img src="{% static "img/avatar-7.jpg" %}" alt="person"
                                                                class="img-fluid rounded-circle">
-                <h2 class="h5">{{ username }}</h2><span>开发者</span>
+                <h2 class="h5">{{ chenxi }}</h2><span>陈曦 </span>
             </div>
             <!-- Small Brand information, appears on minimized sidebar-->
             <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center">
@@ -66,7 +66,7 @@
                 <li><a href="page_2.html"> <i class="icon-interface-windows"></i>库存管理 </a></li>
                 <li><a href="page_3.html"> <i class="icon-interface-windows"></i>会员管理 </a></li>
                 <li><a href="page_4.html"> <i class="icon-interface-windows"></i>退货管理 </a></li>
-                <li><a href="page_5.html"> <i class="icon-interface-windows"></i>供应商管理 </a></li>
+                <li><a href="page_5python manage.py runserver.html"> <i class="icon-interface-windows"></i>供应商管理 </a></li>
                 {#            <li> <a href="#"> <i class="icon-mail"></i>Demo#}
                 {#                <div class="badge badge-warning">6 New</div></a></li>#}
             </ul>
@@ -100,9 +100,10 @@
                         <li class="nav-item dropdown"><a id="notifications" rel="nofollow" data-target="#" href="#"
                                                          data-toggle="dropdown" aria-haspopup="true"
                                                          aria-expanded="false" class="nav-link"><i
-                                class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                                class="fa fa-calendar"></i><span>&nbsp;2019-11-12</span>
                             <ul aria-labelledby="notifications" class="dropdown-menu">
-                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                <li><a rel="nofollow" href
+                                        ="#" class="dropdown-item">
                                     <div class="notification d-flex justify-content-between">
                                         <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new
                                             messages
@@ -134,41 +135,31 @@
                                     </div>
                                 </a></li>
                                 <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
-                                    <strong> <i class="fa fa-bell"></i>view all notifications </strong></a></li>
+                                    <strong> <i class="fa fa-bell"></i>view all notifications </strong></a>
+                                </li>
                             </ul>
-                        </li>
+                        </a></li>
                         <!-- Messages dropdown-->
                         <li class="nav-item dropdown"><a id="messages" rel="nofollow" data-target="#" href="#"
                                                          data-toggle="dropdown" aria-haspopup="true"
                                                          aria-expanded="false" class="nav-link"><i
-                                class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
+                                class="fa fa-download"></i><span>&nbsp;下载选项</span></a>
                             <ul aria-labelledby="notifications" class="dropdown-menu">
                                 <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"><img src="{% static "img/avatar-1.jpg" %}" alt="..."
-                                                                  class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
-                                        <h3 class="h5">Jason Doe</h3><span>sent you a direct message</span><small>3 days
-                                        ago at 7:58 pm - 10.06.2014</small>
+                                        <h3 class="h5">预览</h3>
                                     </div>
                                 </a></li>
                                 <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"><img src="{% static "img/avatar-2.jpg" %}" alt="..."
-                                                                  class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
-                                        <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3
-                                        days ago at 7:58 pm - 10.06.2014</small>
+                                        <h3 class="h5">打印报告</h3>
                                     </div>
                                 </a></li>
                                 <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"><img src="{% static "img/avatar-3.jpg" %}" alt="..."
-                                                                  class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
-                                        <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3
-                                        days ago at 7:58 pm - 10.06.2014</small>
+                                        <h3 class="h5">下载报告</h3>
                                     </div>
                                 </a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
-                                    <strong> <i class="fa fa-envelope"></i>Read all messages </strong></a></li>
                             </ul>
                         </li>
                         <!-- Languages dropdown    -->
@@ -202,7 +193,7 @@
                     <div class="wrapper count-title d-flex">
                         <div class="icon"><i class="icon-user"></i></div>
                         <div class="name"><strong class="text-uppercase">销售额</strong><span>今日</span>
-                            <div class="count-number">￥13,428.1</div>
+                            <div class="count-number">￥4227.8</div>
                         </div>
                     </div>
                 </div>
@@ -211,7 +202,7 @@
                     <div class="wrapper count-title d-flex">
                         <div class="icon"><i class="icon-padnote"></i></div>
                         <div class="name"><strong class="text-uppercase">销售额环比</strong><span>环比昨日</span>
-                            <div class="count-number">+18.8%</div>
+                            <div class="count-number">+3.6%</div>
                         </div>
                     </div>
                 </div>
@@ -220,7 +211,7 @@
                     <div class="wrapper count-title d-flex">
                         <div class="icon"><i class="icon-check"></i></div>
                         <div class="name"><strong class="text-uppercase">今日利润额</strong><span>今日</span>
-                            <div class="count-number">￥5,677.4</div>
+                            <div class="count-number">￥310.4</div>
                         </div>
                     </div>
                 </div>
@@ -229,7 +220,7 @@
                     <div class="wrapper count-title d-flex">
                         <div class="icon"><i class="icon-bill"></i></div>
                         <div class="name"><strong class="text-uppercase">利润额环比</strong><span>环比昨日</span>
-                            <div class="count-number">+13.4%</div>
+                            <div class="count-number">+2.1%</div>
                         </div>
                     </div>
                 </div>
@@ -238,7 +229,7 @@
                     <div class="wrapper count-title d-flex">
                         <div class="icon"><i class="icon-list"></i></div>
                         <div class="name"><strong class="text-uppercase">本月累计利润额</strong><span>月度</span>
-                            <div class="count-number">￥28,900.3</div>
+                            <div class="count-number">￥3125.6</div>
                         </div>
                     </div>
                 </div>
@@ -247,7 +238,7 @@
                     <div class="wrapper count-title d-flex">
                         <div class="icon"><i class="icon-list-1"></i></div>
                         <div class="name"><strong class="text-uppercase">本月累计成本</strong><span>月度</span>
-                            <div class="count-number">￥8,217.4</div>
+                            <div class="count-number">￥2561.5</div>
                         </div>
                     </div>
                 </div>

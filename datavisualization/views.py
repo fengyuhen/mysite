@@ -27,35 +27,35 @@ def login_page(request):
     return HttpResponse(template.render(context, request))
 
 
-@login_required(login_url='login.html')
+# @login_required(login_url='login.html')
 def page_1(request):
     context = {'username': request.user}
     template = loader.get_template('datavisualization/dashboard/page_1.html')
     return HttpResponse(template.render(context, request))
 
 
-@login_required(login_url='login.html')
+# @login_required(login_url='login.html')
 def page_2(request):
     context = {'username': request.user}
     template = loader.get_template('datavisualization/dashboard/page_2.html')
     return HttpResponse(template.render(context, request))
 
 
-@login_required(login_url='login.html')
+# @login_required(login_url='login.html')
 def page_3(request):
     context = {'username': request.user}
     template = loader.get_template('datavisualization/dashboard/page_3.html')
     return HttpResponse(template.render(context, request))
 
 
-@login_required(login_url='login.html')
+# @login_required(login_url='login.html')
 def page_4(request):
     context = {'username': request.user}
     template = loader.get_template('datavisualization/dashboard/page_4.html')
     return HttpResponse(template.render(context, request))
 
 
-@login_required(login_url='login.html')
+# @login_required(login_url='login.html')
 def page_5(request):
     context = {'username': request.user}
     template = loader.get_template('datavisualization/dashboard/page_5.html')

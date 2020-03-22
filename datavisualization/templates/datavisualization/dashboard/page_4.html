@@ -40,7 +40,7 @@
             <!-- User Info-->
             <div class="sidenav-header-inner text-center"><img src="{% static "img/avatar-7.jpg" %}" alt="person"
                                                                class="img-fluid rounded-circle">
-                <h2 class="h5">{{ username }}</h2><span>开发者</span>
+                <h2 class="h5">{{ d }}</h2><span>陈曦</span>
             </div>
             <!-- Small Brand information, appears on minimized sidebar-->
             <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center">
@@ -50,7 +50,7 @@
         <div class="main-menu">
             <h5 class="sidenav-heading">主模块</h5>
             <ul id="side-main-menu" class="side-menu list-unstyled">
-                <li><a href="index.html"> <i class="icon-home"></i>销售管理 </a></li>
+                <li><a href="index.html"> <i class="icon-home"></i>退货管理 </a></li>
                 {#                <li><a href="forms.html"> <i class="icon-form"></i>表单 </a></li>#}
                 {#                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>图表 </a></li>#}
                 {#                <li><a href="tables.html"> <i class="icon-grid"></i>表格 </a></li>#}
@@ -92,7 +92,7 @@
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i
                             class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
-                        <div class="brand-text d-none d-md-inline-block"><span>  </span><strong class="text-primary">采购管理</strong>
+                        <div class="brand-text d-none d-md-inline-block"><span>  </span><strong class="text-primary">退货管理</strong>
                         </div>
                     </a></div>
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
@@ -100,9 +100,10 @@
                         <li class="nav-item dropdown"><a id="notifications" rel="nofollow" data-target="#" href="#"
                                                          data-toggle="dropdown" aria-haspopup="true"
                                                          aria-expanded="false" class="nav-link"><i
-                                class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                                class="fa fa-calendar"></i><span>&nbsp;2020-4-20</span>
                             <ul aria-labelledby="notifications" class="dropdown-menu">
-                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                <li><a rel="nofollow" href
+                                        ="#" class="dropdown-item">
                                     <div class="notification d-flex justify-content-between">
                                         <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new
                                             messages
@@ -134,41 +135,31 @@
                                     </div>
                                 </a></li>
                                 <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
-                                    <strong> <i class="fa fa-bell"></i>view all notifications </strong></a></li>
+                                    <strong> <i class="fa fa-bell"></i>view all notifications </strong></a>
+                                </li>
                             </ul>
-                        </li>
+                        </a></li>
                         <!-- Messages dropdown-->
                         <li class="nav-item dropdown"><a id="messages" rel="nofollow" data-target="#" href="#"
                                                          data-toggle="dropdown" aria-haspopup="true"
                                                          aria-expanded="false" class="nav-link"><i
-                                class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
+                                class="fa fa-download"></i><span>&nbsp;下载选项</span></a>
                             <ul aria-labelledby="notifications" class="dropdown-menu">
                                 <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"><img src="{% static "img/avatar-1.jpg" %}" alt="..."
-                                                                  class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
-                                        <h3 class="h5">Jason Doe</h3><span>sent you a direct message</span><small>3 days
-                                        ago at 7:58 pm - 10.06.2014</small>
+                                        <h3 class="h5">预览</h3>
                                     </div>
                                 </a></li>
                                 <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"><img src="{% static "img/avatar-2.jpg" %}" alt="..."
-                                                                  class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
-                                        <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3
-                                        days ago at 7:58 pm - 10.06.2014</small>
+                                        <h3 class="h5">打印报告</h3>
                                     </div>
                                 </a></li>
                                 <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"><img src="{% static "img/avatar-3.jpg" %}" alt="..."
-                                                                  class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
-                                        <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3
-                                        days ago at 7:58 pm - 10.06.2014</small>
+                                        <h3 class="h5">下载报告</h3>
                                     </div>
                                 </a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
-                                    <strong> <i class="fa fa-envelope"></i>Read all messages </strong></a></li>
                             </ul>
                         </li>
                         <!-- Languages dropdown    -->
@@ -176,17 +167,17 @@
                                                          data-toggle="dropdown" aria-haspopup="true"
                                                          aria-expanded="false"
                                                          class="nav-link language dropdown-toggle"><img
-                                src="{% static "img/flags/16/CN.png" %}" alt="Chinese"><span
+                                src="{% static "img/flags/16/CN.png" %}" alt="English"><span
                                 class="d-none d-sm-inline-block">中文</span></a>
                             <ul aria-labelledby="languages" class="dropdown-menu">
-                                <li><a rel="nofollow" href="#" class="dropdown-item"> <img
-                                        src="{% static "img/flags/16/FR.png" %}" alt="English"
-                                        class="mr-2"><span>French                                                         </span></a>
-                                </li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                    <img src="{% static "img/flags/16/FR.png" %}" alt="English" class="mr-2">
+                                    <span>French                                                         </span>
+                                </a></li>
                             </ul>
                         </li>
                         <!-- Log out-->
-                        <li class="nav-item"><a href="login.html" class="nav-link logout"> <span
+                        <li class="nav-item"><a href="do_logout" class="nav-link logout"> <span
                                 class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
                     </ul>
                 </div>
@@ -262,18 +253,18 @@
 
                 <!-- Pie Chart-->
                 <div class="col-lg-4 col-md-4">
-                    <div class="card project-progress">
-                        <h2 class="display h4">本月退货金额分布图</h2>
+                    <div class="card project-progress" style="height: 500px">
+                        <h2 class="display h4">本周退货金额分布图</h2>
                         <p>月度分析</p>
-                        <div class="pie-chart">
-                            <div id="uglyBarChart" style="width: 400px; height: 300px"></div>
+                        <div class="pie-chart" style="width: 100%">
+                            <div id="uglyBarChart" style="width: 100%; height: 100%"></div>
                             {#                  <canvas class="pieChart" width="250" height="250"> </canvas>#}
                         </div>
                     </div>
                     <div class="card project-progress">
                         <h2 class="display h4">分品类退货金额变化趋势图</h2>
                         <p>月度分析</p>
-                        <div class="pie-chart">
+                        <div class="pie-chart" style="width: 100%">
                             <div id="lineChart" style="width: 100%; height: 100%"></div>
                             {#                  <canvas class="pieChart" width="300" height="300"> </canvas>#}
                         </div>
@@ -281,117 +272,130 @@
                 </div>
                 <!-- Pie Chart-->
                 <div class="col-lg-3 col-md-3">
-                    <div class="card project-progress">
-                        <h2 class="display h4">本月已结算分品类图</h2>
+                    <div class="card project-progress" style="height: 500px">
+                        <h2 class="display h4">本月退货已结算分品类图</h2>
                         <p>月度分析</p>
                         <div class="pie-chart">
-                            <div id="pieChart1" style="width: 500px; height: 300px"></div>
+                            <div id="pieChart1" style="width: 500px; height: 100%"></div>
                             {#                  <canvas class="pieChart" width="300" height="300"> </canvas>#}
                         </div>
                     </div>
                     <div class="card project-progress">
-                        <h2 class="display h4">本月待结算分品类图</h2>
+                        <h2 class="display h4">本月退货待结算分品类图</h2>
                         <p>月度分析</p>
                         <div class="pie-chart">
-                            <div id="pieChart2" style="width: 500px; height: 300px"></div>
+                            <div id="pieChart2" style="width: 500px; height: 100%"></div>
                             {#                  <canvas class="pieChart" width="300" height="300"> </canvas>#}
                         </div>
                     </div>
                 </div>
-                <!-- Line Chart -->
+                <!-- Line Chart -->width: 100%;
                 <div class="col-lg-5 col-md-5 flex-lg-last flex-md-first align-self-baseline">
                     <div class="card sales-report">
-                        <h2 class="display h4">收支分布图</h2>
+                        <h2 class="display h4">帐期预警报告</h2>
                         <p>周度分析</p>
                         <div class="line-chart">
-                            <div id="barChart" style="width: 100%; height: 700px"></div>
-                            {#                  <canvas id="lineChart"></canvas>#}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="dashboard-header section-padding">
-        <div class="container-fluid">
-            <div class="row d-flex align-items-md-stretch">
-
-                <!-- Pie Chart-->
-                <div class="col-lg-2 col-md-2">
-                    <div class="card project-progress">
-                        <h2 class="display h4">采购金额完成度</h2>
-                        <div class="pie-chart">
-                            <div id="gaugeChart1" style="width: 400px; height: 300px"></div>
-                            {#                  <canvas class="pieChart" width="250" height="250"> </canvas>#}
-                        </div>
-                    </div>
-                </div>
-                <!-- Pie Chart-->
-                <div class="col-lg-2 col-md-2">
-                    <div class="card project-progress">
-                        <h2 class="display h4">结算金额完成度</h2>
-                        <div class="pie-chart">
-                            <div id="gaugeChart2" style="width: 400px; height: 100%"></div>
-                            {#                  <canvas class="pieChart" width="300" height="300"> </canvas>#}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-2">
-                    <div class="card project-progress">
-                        <h2 class="display h4">利润金额达标率</h2>
-                        <div class="pie-chart">
-                            <div id="gaugeChart3" style="width: 400px; height: 100%"></div>
-                            {#                  <canvas class="pieChart" width="300" height="300"> </canvas>#}
-                        </div>
-                    </div>
-                </div>
-                <!-- Line Chart -->
-                <div class="col-lg-6 col-md-6 flex-lg-last flex-md-first align-self-baseline">
-                    <div class="card sales-report">
-                        <h2 class="display h4">采购推荐商品名单</h2>
-                        <div>
                             <table class="table table-hover" style="width: 100%">
                                 <thead>
                                 <tr>
                                     <th>商品名称</th>
-                                    <th>预测销量</th>
-                                    <th>待采购数量</th>
-                                    <th>采购预算</th>
+                                    <th>预计帐期</th>
+                                    <th>待结算金额</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>百事可乐</td>
-                                    <td>100</td>
-                                    <td>90</td>
+                                    <td>今天</td>
                                     <td>250</td>
                                 </tr>
                                 <tr>
                                     <td>雪碧</td>
-                                    <td>94</td>
-                                    <td>90</td>
+                                    <td>今天</td>
                                     <td>234</td>
                                 </tr>
                                 <tr>
                                     <td>柠檬茶</td>
-                                    <td>66</td>
-                                    <td>60</td>
+                                    <td>今天</td>
                                     <td>346</td>
                                 </tr>
                                 <tr>
                                     <td>绿箭口香糖</td>
-                                    <td>60</td>
-                                    <td>56</td>
+                                    <td>今天</td>
                                     <td>360</td>
                                 </tr>
                                 <tr>
                                     <td>威化饼干</td>
-                                    <td>42</td>
-                                    <td>35</td>
+                                    <td>今天</td>
+                                    <td>650</td>
+                                </tr>
+                                <tr>
+                                    <td>百事可乐</td>
+                                    <td>今天</td>
+                                    <td>250</td>
+                                </tr>
+                                <tr>
+                                    <td>雪碧</td>
+                                    <td>今天</td>
+                                    <td>234</td>
+                                </tr>
+                                <tr>
+                                    <td>柠檬茶</td>
+                                    <td>今天</td>
+                                    <td>346</td>
+                                </tr>
+                                <tr>
+                                    <td>绿箭口香糖</td>
+                                    <td>今天</td>
+                                    <td>360</td>
+                                </tr>
+                                <tr>
+                                    <td>威化饼干</td>
+                                    <td>今天</td>
+                                    <td>650</td>
+                                </tr>
+                                <tr>
+                                    <td>绿箭口香糖</td>
+                                    <td>今天</td>
+                                    <td>360</td>
+                                </tr>
+                                <tr>
+                                    <td>威化饼干</td>
+                                    <td>今天</td>
+                                    <td>650</td>
+                                </tr><tr>
+                                    <td>威化饼干</td>
+                                    <td>今天</td>
+                                    <td>650</td>
+                                </tr>
+                                <tr>
+                                    <td>绿箭口香糖</td>
+                                    <td>今天</td>
+                                    <td>360</td>
+                                </tr>
+                                <tr>
+                                    <td>威化饼干</td>
+                                    <td>今天</td>
+                                    <td>650</td>
+                                </tr>
+                                <tr>
+                                    <td>威化饼干</td>
+                                    <td>今天</td>
+                                    <td>650</td>
+                                </tr>
+                                <tr>
+                                    <td>绿箭口香糖</td>
+                                    <td>今天</td>
+                                    <td>360</td>
+                                </tr>
+                                <tr>
+                                    <td>威化饼干</td>
+                                    <td>今天</td>
                                     <td>650</td>
                                 </tr>
                                 </tbody>
                             </table>
+                            {#                  <canvas id="lineChart"></canvas>#}
                         </div>
                     </div>
                 </div>
@@ -422,7 +426,7 @@
 <script src="{% static "vendor/echart.js/dist/echarts.js" %}"></script>
 <script src="{% static "vendor/jquery-validation/jquery.validate.min.js" %}"></script>
 <script src="{% static "vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" %}"></script>
-<script src="{% static "js/charts-page-1.js" %}"></script>
+<script src="{% static "js/charts-page-4.js" %}"></script>
 <!-- Main File-->
 <script src="{% static "js/front.js" %}"></script>
 </body>

@@ -73,11 +73,96 @@ $(document).ready(function () {
 
 
     // var pieChart = echarts.init(document.getElementsByClassName('pie-chart'));
-    let pieChart = echarts.init(document.getElementById('pieChart'));
+    let pieChart1 = echarts.init(document.getElementById('pieChart'));
     let pieChart2 = echarts.init(document.getElementById('pieChart2'));
     let pieChart3 = echarts.init(document.getElementById('pieChart3'));
     let pieChart4 = echarts.init(document.getElementById('pieChart4'));
-    let option = {
+    let option1 = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: ['饮料', '零食', '水果', '日用品', '其他']
+        },
+        series: [
+            {
+                name: '利润来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {value: 335, name: '饮料'},
+                    {value: 600, name: '零食'},
+                    {value: 135, name: '日用品'}
+                ]
+            }
+        ]
+    };
+
+    let option2 = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: ['饮料', '零食', '水果', '日用品', '其他']
+        },
+        series: [
+            {
+                name: '利润来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {value: 634, name: '饮料'},
+                    {value: 310, name: '零食'}
+                ]
+            }
+        ]
+    };
+
+    let option3 = {
         tooltip: {
             trigger: 'item',
             formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -114,15 +199,60 @@ $(document).ready(function () {
                 data: [
                     {value: 335, name: '饮料'},
                     {value: 310, name: '零食'},
-                    {value: 234, name: '水果'},
                     {value: 135, name: '日用品'},
-                    {value: 1548, name: '其他'}
+                    {value: 100, name: '其他'}
                 ]
             }
         ]
     };
-    pieChart.setOption(option);
-    pieChart2.setOption(option);
-    pieChart3.setOption(option);
-    pieChart4.setOption(option);
+
+    let option4 = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: ['饮料', '零食', '日用品', '水果', '其他']
+        },
+        series: [
+            {
+                name: '利润来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {value: 335, name: '饮料'},
+                    {value: 310, name: '零食'},
+                    {value: 234, name: '水果'},
+                    {value: 1153, name: '日用品'},
+                    {value: 156, name: '其他'}
+                ]
+            }
+        ]
+    };
+
+    pieChart1.setOption(option1);
+    pieChart2.setOption(option2);
+    pieChart3.setOption(option3);
+    pieChart4.setOption(option4);
 });
