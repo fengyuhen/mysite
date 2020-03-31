@@ -65,7 +65,7 @@ $(document).ready(function () {
                         position: 'left'
                     }
                 },
-                data: [-120, -132, -101, -134, -190, -230, -210]
+                data: [0, -132, -50, -80, -664, -290, -310]
             }
         ]
     };
@@ -184,7 +184,7 @@ $(document).ready(function () {
 
     let pieChart1 = echarts.init(document.getElementById('pieChart1'));
     let pieChart2 = echarts.init(document.getElementById('pieChart2'));
-    let option_pieChart = {
+    let option_pieChart2 = {
         title: {
             // text: '南丁格尔玫瑰图',
             // subtext: '纯属虚构',
@@ -197,7 +197,7 @@ $(document).ready(function () {
         legend: {
             x: 'center',
             y: 'bottom',
-            data: ['食品类', '饮料类', '日用品', '文具类', '其他']
+            data: ['食品类', '饮料类', '日用品', '水果', '其他']
         },
         toolbox: {
             show: true,
@@ -244,20 +244,87 @@ $(document).ready(function () {
                     {value: 10, name: '食品类'},
                     {value: 5, name: '饮料类'},
                     {value: 15, name: '日用品'},
-                    {value: 25, name: '文具类就'},
+                    {value: 7, name: '水果'},
                     {value: 20, name: '其他'},
                 ]
             }
         ]
     };
 
-    pieChart1.setOption(option_pieChart);
-    pieChart2.setOption(option_pieChart);
+    let option_pieChart1 = {
+        title: {
+            // text: '南丁格尔玫瑰图',
+            // subtext: '纯属虚构',
+            x: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            x: 'center',
+            y: 'bottom',
+            data: ['食品类', '饮料类', '日用品', '水果', '其他']
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {show: true},
+                dataView: {show: true, readOnly: false},
+                magicType: {
+                    show: true,
+                    type: ['pie', 'funnel']
+                },
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        calculable: true,
+        series: [
+            {
+                name: '半径模式',
+                type: 'pie',
+                radius: [20, 110],
+                center: ['25%', '50%'],
+                roseType: 'radius',
+                label: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: true
+                    },
+                    show: false
+                },
+                lableLine: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                legend: {
+                    show: false
+                },
+                data: [
+                    {value: 6, name: '食品类'},
+                    {value: 10, name: '饮料类'},
+                    {value: 8, name: '日用品'},
+                    {value: 15, name: '水果'},
+                    {value: 5, name: '其他'},
+                ]
+            }
+        ]
+    };
+
+    pieChart1.setOption(option_pieChart1);
+    pieChart2.setOption(option_pieChart2);
 
     let gaugeChart1 = echarts.init(document.getElementById('gaugeChart1'));
     let gaugeChart2 = echarts.init(document.getElementById('gaugeChart2'));
     let gaugeChart3 = echarts.init(document.getElementById('gaugeChart3'));
-    let option_gaugeChart = {
+    let option_gaugeChart1 = {
         tooltip: {
             formatter: "{a} <br/>{b} : {c}%"
         },
@@ -272,13 +339,51 @@ $(document).ready(function () {
                 name: '业务指标',
                 type: 'gauge',
                 detail: {formatter: '{value}%'},
-                data: [{value: 50, name: '完成率'}]
+                data: [{value: 82, name: '完成率'}]
             }
         ]
     };
-    gaugeChart1.setOption(option_gaugeChart);
-    gaugeChart2.setOption(option_gaugeChart);
-    gaugeChart3.setOption(option_gaugeChart);
+    let option_gaugeChart2 = {
+        tooltip: {
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '业务指标',
+                type: 'gauge',
+                detail: {formatter: '{value}%'},
+                data: [{value: 90, name: '完成率'}]
+            }
+        ]
+    };
+    let option_gaugeChart3 = {
+        tooltip: {
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '业务指标',
+                type: 'gauge',
+                detail: {formatter: '{value}%'},
+                data: [{value: 67, name: '完成率'}]
+            }
+        ]
+    };
+    gaugeChart1.setOption(option_gaugeChart1);
+    gaugeChart2.setOption(option_gaugeChart2);
+    gaugeChart3.setOption(option_gaugeChart3);
 
 
 });
